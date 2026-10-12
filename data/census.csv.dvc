@@ -1,0 +1,6 @@
+outs:
+- md5: 9bae038b4f0565b340ce3f11ac86f060
+  size: 3551169
+  isexec: true
+  hash: md5
+  path: census.csv
