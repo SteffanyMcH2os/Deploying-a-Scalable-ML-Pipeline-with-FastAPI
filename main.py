@@ -27,6 +27,7 @@ class Data(BaseModel):
     hours_per_week: int = Field(..., example=40, alias="hours-per-week")
     native_country: str = Field(..., example="United-States", alias="native-country")
 
+
 project_path = os.path.dirname(os.path.abspath(__file__))
 
 path = os.path.join(project_path, "model", "encoder.pkl")
@@ -44,7 +45,7 @@ app = FastAPI()
 async def get_root():
     """ Say hello!"""
     return {"message": "Welcome to the census data application!"}
-    
+
 
 # Create a POST on a different path that does model inference
 @app.post("/data/")

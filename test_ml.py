@@ -1,12 +1,13 @@
 from sklearn.preprocessing import LabelBinarizer, OneHotEncoder
 import numpy as np
 import pandas as pd
-import pytest
-# TODO: add necessary import
+
+# Add necessary import
 from ml.data import apply_label, process_data
 from ml.model import compute_model_metrics
 
-# TODO: implement the first test. Change the function name and input as needed
+
+# Implement the first test. Change the function name and input as needed
 def test_apply_label():
     """
     Test the apply_label function with two simple cases.
@@ -24,7 +25,7 @@ def test_apply_label():
             )
 
 
-#TODO: implement the second test. Change the function name and input as needed
+# Implement the second test. Change the function name and input as needed
 def test_process_data_training():
     """
     Test the process_data function for training mode with a simple case.
@@ -61,11 +62,9 @@ def test_process_data_training():
     np.testing.assert_array_equal(y, np.array([0, 1, 0])), (
         'Expected y to be numpy array [0, 1, 0] for the given labels'
     )
-    # Your code here
-    
 
 
-# TODO: implement the third test. Change the function name and input as needed
+# Implement the third test. Change the function name and input as needed
 def test_compute_model_metrics():
     """
     Check metrics when predictions include one false positive.
@@ -85,4 +84,3 @@ def test_compute_model_metrics():
     assert np.isclose(fbeta, 0.8, atol=1e-4), (
         'Expected fbeta to be approximately 0.8'
     )
-    
